@@ -1,5 +1,5 @@
 /* .burningflower */
-   
+
 /*
 ** Copyright by Kesson Dalef (Giovanni Muzio)
 ** Creative Commons: Attribution Non-Commercial license
