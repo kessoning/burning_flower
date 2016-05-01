@@ -2,7 +2,7 @@
    
 /*
 ** Copyright by Kesson Dalef (Giovanni Muzio)
-** Creative Commons: Attribution NonàCommercial license
+** Creative Commons: Attribution Non-Commercial license
 **
 ** mail: kessoning@gmail.com
 ** YouTube: http://www.youtube.com/user/complexPolimorphic
@@ -31,7 +31,7 @@ void setup() {
 
   for (int i = 0; i < 50; i++) {
     float angle = map(i, 0, 50, 0, TWO_PI);
-    vehicles.add(new Vehicle((cos(angle)*(width/5))+width/2, (sin(angle)*(width/5))+height/2));
+    vehicles.add(new Vehicle((cos(angle)*2)+width/2, (sin(angle)*2)+height/2));
   }
 }
 
@@ -40,9 +40,9 @@ void draw() {
   rect(0, 0, width, height);
 
   if (vehicles.size() < 10000) {
-    for (int i = 0; i < 50; i++) {
-      float angle = map(i, 0, 50, 0, TWO_PI);
-      vehicles.add(new Vehicle((cos(angle)*(width/5))+width/2, (sin(angle)*(width/5))+height/2));
+    for (int i = 0; i < 100; i++) {
+      float angle = map(i, 0, 100, 0, TWO_PI);
+      vehicles.add(new Vehicle((cos(angle)*2)+width/2, (sin(angle)*2)+height/2));
     }
   }
 
@@ -65,16 +65,5 @@ void draw() {
     if (v.isAlive == false) {
       vehicles.remove(i);
     }
-  }
-}
-
-
-void mouseDragged() {
-  vehicles.add(new Vehicle(mouseX, mouseY));
-}
-
-void keyPressed() {
-  if (key == 'c') {
-    cancel = true;
   }
 }
